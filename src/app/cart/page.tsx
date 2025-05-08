@@ -2,7 +2,8 @@ import { PageBox } from "@/components/atoms/PageBox";
 import { PageColumn } from "@/components/atoms/PageColumn";
 import { Text } from "@/components/atoms/Text";
 
-export default function Cart() {
+export default async function Cart() {
+
   return (
     <PageBox>
       <PageColumn>

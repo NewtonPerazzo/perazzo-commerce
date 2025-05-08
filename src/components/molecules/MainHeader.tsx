@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@mui/material";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';

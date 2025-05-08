@@ -2,7 +2,7 @@ import { fontSizeDefaultBreakpoints } from "@/styles/breakpoints/fontSizeDefault
 import { Box } from "@mui/material";
 
 interface TextProps {
-    value?: string;
+    value?: string | number;
     style?: any;
     variant?: any;
     size?: string;
@@ -13,7 +13,6 @@ export const Text = ({ value, style, size, variant = "p" }: TextProps) => {
         <Box
             component={variant}
             sx={{
-                textAlign: 'center',
                 fontSize: size || fontSizeDefaultBreakpoints,
                 ...style,
             }}
