@@ -1,7 +1,13 @@
+import { PageBox } from "@/components/atoms/PageBox";
+import { PageColumn } from "@/components/atoms/PageColumn";
+import { Text } from "@/components/atoms/Text";
+
 export default function Cart() {
   return (
-    <div>
-      <h1>Cart</h1>
-    </div>
+    <PageBox>
+      <PageColumn>
+        <Text variant="h1" value="Cart" />
+      </PageColumn>
+    </PageBox>
   );
 }
