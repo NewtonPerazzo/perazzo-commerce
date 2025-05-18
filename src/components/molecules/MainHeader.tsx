@@ -3,8 +3,11 @@ import { Box } from "@mui/material";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Logo } from "../atoms/Logo";
+import { useRouter } from "next/navigation";
+import { Pages } from "@/enums/Pages";
 
 export const MainHeader = () => {
+    const router = useRouter()
     return (
         <Box 
             sx={{
@@ -20,7 +23,7 @@ export const MainHeader = () => {
             }}
         >
             <WhatsAppIcon />
-            <Logo  /> {/*  image="/imgs/logo.png" */}
+            <Logo onClick={() => router.push(Pages.HOME)} /> {/*  image="/imgs/logo.png" */}
             <ShoppingCartIcon />
         </Box>
     );

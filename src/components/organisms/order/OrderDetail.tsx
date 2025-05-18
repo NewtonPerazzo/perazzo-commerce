@@ -4,13 +4,11 @@ import { IOrder } from "@/models/order/order";
 
 interface OrderDetailProps {
     order: IOrder;
-    loading: boolean;
 }
 
-export const OrderDetail = ({ order, loading }: OrderDetailProps) => {
+export const OrderDetail = ({ order }: OrderDetailProps) => {
     return (
         <>
-            {loading && <Text variant="h1" value="Loading..." />}
             {
                 order?.cart?.items?.map((c) => (
                     <Text key={c.id} variant="h1" value={c.name} />
