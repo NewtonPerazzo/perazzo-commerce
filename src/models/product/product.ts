@@ -15,3 +15,8 @@ export interface IProductCart extends IProduct {
     quantity: number;
     tottalValue: number;
 }
+
+export interface IProductByCategory {
+    category: ICategory
+    items: IProduct[]
+}

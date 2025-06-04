@@ -1,5 +1,4 @@
 import { PageBox } from "@/components/atoms/PageBox";
-import { PageColumn } from "@/components/atoms/PageColumn";
 import { Text } from "@/components/atoms/Text";
 import { LazyLoading } from "@/components/molecules/LazyLoading/LazyLoading";
 import { ProductHome } from "@/components/organisms/product/ProductHome"
@@ -14,10 +13,10 @@ export default async function Home() {
       <Hydrater data={items} action="setProducts" />
       <PageBox>
         {loading ? <LazyLoading /> :
-          <PageColumn>
-            <Text variant="h1" value="Home" />
+          <div>
+            <Text variant="h1" value="Bem-vindo(a) ao meu mundo doce" />
             <ProductHome items={items} />
-          </PageColumn>
+          </div>
         }
       </PageBox>
     </>
