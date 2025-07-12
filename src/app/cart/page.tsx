@@ -1,14 +1,11 @@
-import { PageBox } from "@/components/atoms/PageBox";
-import { PageColumn } from "@/components/atoms/PageColumn";
-import { Text } from "@/components/atoms/Text";
+import React from "react";
+import { CartDetail } from "@/components/organisms/cart/CartDetail";
+import { Box } from "@mui/material";
 
-export default async function Cart() {
-
+export default function Cart() {
   return (
-    <PageBox>
-      <PageColumn>
-        <Text variant="h1" value="Cart" />
-      </PageColumn>
-    </PageBox>
+    <Box sx={{ padding: 2 }}>
+      <CartDetail />
+    </Box>
   );
 }

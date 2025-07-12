@@ -4,7 +4,6 @@ import { Product } from "@/components/molecules/Home/Product";
 import { useProduct } from "@/hooks/product";
 import { IProduct } from "@/models/product/product";
 import { Box } from "@mui/material";
-import Link from "next/link";
 
 interface ProductHomeProps {
     items: IProduct[];
@@ -24,10 +23,9 @@ export const ProductHome = ({ items }: ProductHomeProps) => {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 1,
-                marginTop: marginTopComponents
+                marginTop: marginTopComponents,
             }}
         >
-
             {productsByCategory?.map((item) => (
                 <Box 
                     key={item.category.id} 
@@ -44,16 +42,23 @@ export const ProductHome = ({ items }: ProductHomeProps) => {
                         sx={{
                             display: 'flex',
                             flexDirection: 'row',
-                            overflowX: 'scroll',
                             scrollbarWidth: 'none',
                             gap: 1,
-                            marginTop: marginTopComponents
+                            marginTop: marginTopComponents,
+                            overflowX: {
+                                    xs: "auto",
+                                    sm: "auto",
+                                    md: "unset" 
+                                },
+                                flexWrap: {
+                                    xs: "nowrap", 
+                                    md: "wrap"
+                                },
+                            
                         }}
                     >
                         {item.items.map((product) => (
-                            <Link href={`/product/${product.id}`} key={product.id}>
-                                <Product product={product} />
-                            </Link>
+                            <Product product={product} key={product.id} />
                         ))}
                     </Box>
                 </Box>

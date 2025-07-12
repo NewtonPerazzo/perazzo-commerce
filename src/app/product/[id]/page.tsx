@@ -6,7 +6,7 @@ import Hydrater from "@/hydrater/Hydrater";
 import { SSRFetchProductByID } from "@/store/ssr/product/fetchProductByIDSSR";
 
 export default async function Product({ params }: { params: { id: string } }) {
-  const { product, loading } = await SSRFetchProductByID(params?.id);
+  const { product, loading } = await SSRFetchProductByID(params.id ?? "");
 
   return (
     <>

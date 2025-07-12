@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 interface TextProps {
     value?: string | number;
     style?: any;
-    variant?: any;
+    variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
     size?: string;
 }
 

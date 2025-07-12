@@ -5,6 +5,8 @@ import { store } from "@/store";
 
 export const Providers = ({ children }: { children: ReactNode }) => {
   return (
-    <Provider store={store}>{children}</Provider>
+    <Provider store={store}>
+      {children}
+    </Provider>
   );
 };

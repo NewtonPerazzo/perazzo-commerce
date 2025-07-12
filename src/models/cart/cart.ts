@@ -1,7 +1,14 @@
-import { IProductCart } from "../product/product";
+import { IProduct } from "../product/product";
 
+
+export interface ItemCart {
+  count: number;
+  total: number;
+  item: IProduct;
+};
 export interface ICart {
     id: string;
-    items: IProductCart[];
-    totalValue: number;
+    count: number;
+    total: number;
+    items: ItemCart[];
 }

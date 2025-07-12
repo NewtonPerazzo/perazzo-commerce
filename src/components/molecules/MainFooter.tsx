@@ -7,13 +7,13 @@ export const MainFooter = () => {
         <Box 
             sx={{
                 height: 40,
-                position: "fixed",
                 bottom: 0,
                 width: "100%",
                 justifyContent: "center",
                 alignItems: "center",
                 display: "flex",
                 borderTop: "1px solid #ccc",
+                marginTop: 8
             }}
         >
             <Text value="Desenvolvido por Newton Perazzo" />
